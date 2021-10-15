@@ -15,16 +15,16 @@ const AddMealForm = () => {
 
   const requestObject = {
     method: 'POST',
-    headers: {'Content-Type': 'application/json'},
+    headers: {'Content-Type': 'text/plain'},
     body: formData
   }
   async function addMeal() {
-    console.log(requestObject.body);
     // const res = await fetch (
     //   `${URL}/meals`, requestObject
     // )
     // const json = await res.json();
   }
+
   return (
     <div className="m-8">
       <Panel layout="paper" className="p-8 md:p-16 w-full md:w-1/2 md:m-auto">
@@ -70,4 +70,5 @@ const AddMealForm = () => {
   )
 }
 
-export default withAuthenticationRequired(AddMealForm);
+// export default withAuthenticationRequired(AddMealForm);
+export default AddMealForm;
