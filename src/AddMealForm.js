@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Input, Select, Panel } from "@webeetle/windy";
+import { Button, Input, Select, Panel, Loader } from "@webeetle/windy";
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 
 const AddMealForm = () => {
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const URL = process.env.REACT_APP_API_URL;
 
   const handleChange = (e) => {
@@ -18,11 +20,16 @@ const AddMealForm = () => {
     headers: {'Content-Type': 'text/plain'},
     body: formData
   }
+
   async function addMeal() {
+    setIsSubmitting(true);
     // const res = await fetch (
     //   `${URL}/meals`, requestObject
     // )
     // const json = await res.json();
+
+    // TODO: Edit API to handle CORS; For now use loader and success to demo
+    setTimeout(() => setIsSubmitting(false), 1500);
   }
 
   return (
@@ -63,7 +70,11 @@ const AddMealForm = () => {
             >
             </textarea>
           </div>
-          <Button shadow="md" className="justify-center">Submit</Button>
+          { isSubmitting ? (
+            <Button shadow="md" className="justify-center"><Loader type="circle" color="none" /></Button>
+          ) : (
+            <Button shadow="md" className="justify-center">Submit</Button>
+          )}
         </form>
       </Panel>
     </div>

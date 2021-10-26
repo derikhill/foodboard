@@ -17,7 +17,7 @@ const NavbarResponsive = () => {
 };
 
 const pages = ['Add-Meal', 'About'];
-const navLinks = pages.map(page => <Link to={`${page.replace(/-/g, "").toLowerCase()}`} key={page} className="no-underline text-gray-800 font-semibold hover:text-gray-600" >{page.replace(/-/g, " ")}</Link>);
+const navLinks = pages.map(page => <Link to={`/${page.replace(/-/g, "").toLowerCase()}`} key={page} className="no-underline text-gray-800 font-semibold hover:text-gray-600" >{page.replace(/-/g, " ")}</Link>);
 
 const Navbar = ({ menuOpen, setMenuOpen }) => (
   <div className="flex items-center justify-between p-4">
