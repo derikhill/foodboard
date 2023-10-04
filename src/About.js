@@ -8,17 +8,17 @@ const About = () => {
   return (
     <div>
       <div className="bg-gray-200">
-        <div className="md:w-1/2 m-auto p-12 space-y-4">
+        <div className="p-12 m-auto space-y-4 md:w-1/2">
           <p className="text-xl font-light">This page is for my fellow geeks who want to know what's under the hood.</p>
           <p className="text-xl font-light">This web app is a fullstack app written by me. It is written using various 
             technologies I've wanted to try and some I've already used.</p>
           <p className="text-2xl">Let's get into it!</p>
         </div>
       </div>
-      <div className="md:grid grid-cols-2 p-10 md:p-20">
+      <div className="grid-cols-2 p-10 md:grid md:p-20">
         <section>
-          <Panel className="p-4 md:p-16 border-0">
-            <h2 className="text-5xl font-bold mb-5">Auth</h2>
+          <Panel className="p-4 border-0 md:p-16">
+            <h2 className="mb-5 text-5xl font-bold">Auth</h2>
             <p className="text-xl">
               Starting at the beginning I chose Auth0 <br />
               as the authorization because of how easy it was to <br />
@@ -26,7 +26,7 @@ const About = () => {
             </p>
             <p className="text-xl">
               While the idea is to have Add Meal be a protected <br />
-              route Idisabled that for now to be able to see the form. 
+              route I disabled that for now to be able to see the form. 
             </p>
             <p className="text-xl">
               The signup button is functional so you can at least see <br />
@@ -42,26 +42,26 @@ const About = () => {
           />
         </section>
       </div>
-      <div className="md:grid grid-cols-2 p-10 md:p-20 bg-gray-200">
+      <div className="grid-cols-2 p-10 bg-gray-200 md:grid md:p-20">
       
         <section className="p-12">
           <img 
-            className="w-80 m-auto"
+            className="m-auto w-80"
             src={ MongoLogo } 
             alt="MongoDB Logo" 
           />
         </section>
         <section>
-          <Panel className="p-4 md:p-16 border-0 bg-gray-200">
-            <h2 className="text-5xl font-bold mb-5">Database</h2>
+          <Panel className="p-4 bg-gray-200 border-0 md:p-16">
+            <h2 className="mb-5 text-5xl font-bold">Database</h2>
             <p className="text-xl">This web app uses a MongoDB cluster to store and retrieve data</p>
           </Panel>
         </section>
       </div>
-      <div className="md:grid grid-cols-2 p-10 md:p-20">
+      <div className="grid-cols-2 p-10 md:grid md:p-20">
         <section>
-          <Panel className="p-4 md:p-16 border-0">
-            <h2 className="text-5xl font-bold mb-5">API</h2>
+          <Panel className="p-4 border-0 md:p-16">
+            <h2 className="mb-5 text-5xl font-bold">API</h2>
             <p className="text-xl">
               The API is written with the serverless stack <br />
               using Lambda functions hosted with AWS
@@ -76,7 +76,7 @@ const About = () => {
           />
         </section>
       </div>
-      <div className="md:grid grid-cols-2 p-10 md:p-20 bg-gray-200">
+      <div className="grid-cols-2 p-10 bg-gray-200 md:grid md:p-20">
         <section className="p-12">
           <img 
             className="w-64 m-auto"
@@ -85,8 +85,8 @@ const About = () => {
           />
         </section>
         <section>
-          <Panel className="p-4 md:p-16 border-0 bg-gray-200">
-            <h2 className="text-5xl font-bold mb-5">Frontend</h2>
+          <Panel className="p-4 bg-gray-200 border-0 md:p-16">
+            <h2 className="mb-5 text-5xl font-bold">Frontend</h2>
             <p className="text-xl">
               All the UI comonents are written in React <br />
               and styled with Tailwind CSS.  <br />
